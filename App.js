@@ -2,20 +2,26 @@ const mysql = require('mysql');
 const inquirer = require('inquirer');
 const { printTable } = require('console-table-printer');
 const figlet = require('figlet');
+
+require('dotenv').config();
+var passWord = process.env.MySQL;
+
 let roles;
 let departments;
 let managers;
 let employees;
 
+
+
 var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "#001BossLady",
+    password: passWord,
     database: "EMS_db"
   });
 
-  figlet('EMS Tracker', (err, result) => {
+  figlet('EM System', (err, result) => {
     console.log(err || result);
   });
 
