@@ -165,12 +165,12 @@ addRole = () => {
     {
       name: "salary",
       type: "input",
-      message: "What is the salary for this possition?"
+      message: "What is the salary for this position?"
     },
     {
       name: "department_id",
       type: "list",
-      message: "What is the department for this possition?",
+      message: "What is the department for this position?",
       choices: departmentOptions
     },
   ]).then(function(answer) {
@@ -340,7 +340,7 @@ updateItem = () => {
       updateEmployeeManager();
     }
     else if(answer.update === "EXIT") {
-      figlet('Thanks for using FSC Employee Tracker', (err, result) => {
+      figlet('Thanks for your patrona', (err, result) => {
         console.log(err || result);
       });
 
